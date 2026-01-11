@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDY-HUB</title>
+
+    <!-- Pixel font (čitljiv) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<button id="modeToggle">Dark mode</button>
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+    <h1>STUDY-HUB</h1>
+    <p class="subtitle">Prostor za fokusirano i prijatno ucenje</p>
+
+    <div class="gallery">
+        <button onclick="showPage('calendar')">Kalendar</button>
+        <button onclick="showPage('music')">Lofi muzika</button>
+        <button onclick="showPage('todo')">To-Do lista</button>
+        <button onclick="showPage('pomodoro')">Pomodoro tajmer</button>
+    </div>
+</section>
+
+<!-- KALENDAR -->
+<section id="calendar" class="page">
+    <h2>Kalendar</h2>
+    <input type="date">
+    <button onclick="showPage('home')">Nazad</button>
+</section>
+
+<!-- MUZIKA -->
+<section id="music" class="page">
+    <h2>Lofi muzika za ucenje</h2>
+
+    <iframe
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdR77H5Z8MIM"
+        width="300"
+        height="380"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+
+    <button onclick="showPage('home')">Nazad</button>
+</section>
+
+<!-- TODO -->
+<section id="todo" class="page">
+    <h2>To-Do lista</h2>
+
+    <input type="text" id="todoInput" placeholder="Unesi zadatak">
+    <button onclick="addTodo()">Dodaj</button>
+
+    <ul id="todoList"></ul>
+
+    <button onclick="showPage('home')">Nazad</button>
+</section>
+
+<!-- POMODORO -->
+<section id="pomodoro" class="page">
+    <h2>Pomodoro tajmer</h2>
+
+    <div id="timer">25:00</div>
+    <button onclick="startPomodoro()">Start</button>
+    <button onclick="resetPomodoro()">Reset</button>
+
+    <button onclick="showPage('home')">Nazad</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
