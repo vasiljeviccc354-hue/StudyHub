@@ -9,8 +9,10 @@
 </head>
 <body class="light">
 
+<!-- Toggle Dark/Light Mode -->
 <button id="modeToggle">Dark mode</button>
 
+<!-- HOME PAGE -->
 <section id="home" class="page active">
     <h1>STUDY-HUB</h1>
     <p class="subtitle">Prostor za fokusirano i prijatno ucenje</p>
@@ -23,6 +25,7 @@
         </div>
     </div>
 
+    <!-- Galerija dugmadi -->
     <div class="gallery">
         <button onclick="showPage('calendar')">Kalendar</button>
         <button onclick="showPage('music')">Lofi muzika</button>
@@ -31,19 +34,18 @@
     </div>
 </section>
 
+<!-- KALENDAR PAGE -->
 <section id="calendar" class="page">
     <h2>Kalendar</h2>
-
     <div class="calendar-wrapper">
         <input type="date" class="calendar-big">
     </div>
-
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
+<!-- MUZIKA PAGE -->
 <section id="music" class="page">
     <h2>Ghibli instrumental lofi</h2>
-
     <iframe
         src="https://open.spotify.com/embed/playlist/0JQ5DAqbMKFCbimwdOYlsl"
         width="320"
@@ -51,28 +53,24 @@
         frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
     </iframe>
-
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
+<!-- TO-DO LIST PAGE -->
 <section id="todo" class="page">
     <h2>To-Do lista</h2>
-
     <input type="text" id="todoInput" placeholder="Unesi zadatak">
     <button onclick="addTodo()">Dodaj</button>
-
     <ul id="todoList"></ul>
-
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
+<!-- POMODORO PAGE -->
 <section id="pomodoro" class="page">
     <h2>Pomodoro tajmer</h2>
-
     <div id="timer">25:00</div>
     <button onclick="startPomodoro()">Start</button>
     <button onclick="resetPomodoro()">Reset</button>
-
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
