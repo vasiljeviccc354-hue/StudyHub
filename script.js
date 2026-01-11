@@ -1,3 +1,4 @@
+// NAVIGACIJA IZMEĐU STRANICA
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
@@ -5,7 +6,7 @@ function showPage(pageId) {
     document.getElementById(pageId).classList.add('active');
 }
 
-/* Light / Dark mode */
+// DARK / LIGHT MODE
 const toggle = document.getElementById("modeToggle");
 
 toggle.addEventListener("click", () => {
@@ -18,7 +19,7 @@ toggle.addEventListener("click", () => {
     }
 });
 
-/* To-Do lista */
+// TO-DO LIST
 function addTodo() {
     const input = document.getElementById("todoInput");
     if (input.value.trim() === "") return;
@@ -34,7 +35,7 @@ function addTodo() {
     input.value = "";
 }
 
-/* Pomodoro */
+// POMODORO TIMER
 let time = 1500;
 let interval = null;
 
