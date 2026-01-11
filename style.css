@@ -21,6 +21,7 @@ body.dark {
     color: var(--sage);
 }
 
+/* PAGE */
 .page {
     display: none;
     padding: 40px;
@@ -41,6 +42,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* GALERIJA DUGMAD */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -76,11 +78,13 @@ body.dark button {
     right: 15px;
 }
 
+/* TIMER */
 #timer {
     font-size: 24px;
     margin: 20px;
 }
 
+/* LISTE */
 ul {
     list-style: none;
     padding: 0;
@@ -95,7 +99,7 @@ li {
     cursor: pointer;
 }
 
-/* Kalendar */
+/* KALENDAR */
 .calendar-wrapper {
     margin: 40px auto;
 }
@@ -117,7 +121,7 @@ body.dark .calendar-big {
     border-color: var(--sage-dark);
 }
 
-/* Zabica */
+/* ZABICA */
 .frog-container {
     margin: 20px auto 30px;
     width: 120px;
@@ -163,6 +167,7 @@ body.dark .frog {
     background-color: var(--sage-dark);
 }
 
+/* ANIMACIJE */
 @keyframes hop {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -170,12 +175,6 @@ body.dark .frog {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
