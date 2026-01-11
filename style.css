@@ -48,7 +48,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     max-width: 300px;
-    margin: auto;
+    margin: 30px auto 0;
 }
 
 button {
@@ -92,11 +92,16 @@ ul {
 
 li {
     background-color: var(--sage);
-    margin: 8px auto;
-    padding: 10px;
-    width: 220px;
+    margin: 10px auto;
+    padding: 12px;
+    width: 260px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+li:hover {
+    background-color: var(--brown);
+    color: white;
 }
 
 /* KALENDAR */
@@ -106,9 +111,9 @@ li {
 
 .calendar-big {
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
+    font-size: 18px;
     padding: 20px;
-    width: 260px;
+    width: 280px;
     border-radius: 12px;
     border: 3px solid var(--sage);
     background-color: var(--beige);
@@ -123,7 +128,7 @@ body.dark .calendar-big {
 
 /* ZABICA */
 .frog-container {
-    margin: 20px auto 30px;
+    margin: 40px auto 30px; /* spustena niz */
     width: 120px;
 }
 
@@ -165,6 +170,11 @@ body.dark .calendar-big {
 
 body.dark .frog {
     background-color: var(--sage-dark);
+}
+
+/* YouTube kontejner */
+.music-container {
+    margin: 20px auto;
 }
 
 /* ANIMACIJE */
