@@ -34,7 +34,7 @@ function addTodo() {
     input.value = "";
 }
 
-/* Pomodoro tajmer */
+/* Pomodoro */
 let time = 1500;
 let interval = null;
 
