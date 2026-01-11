@@ -1,0 +1,107 @@
+:root {
+    --sage: #9caf88;
+    --beige: #f5f1e6;
+    --brown: #6b4f3f;
+
+    --sage-dark: #6f8263;
+    --beige-dark: #1e1e1e;
+    --brown-dark: #3b2a20;
+}
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--beige);
+    color: var(--brown);
+    text-align: center;
+}
+
+body.dark {
+    background-color: var(--beige-dark);
+    color: var(--sage);
+}
+
+.page {
+    display: none;
+    padding: 40px;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.6s ease;
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--sage);
+}
+
+.subtitle {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 300px;
+    margin: auto;
+}
+
+button {
+    font-family: inherit;
+    padding: 12px;
+    background-color: var(--sage);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--brown);
+    color: white;
+}
+
+body.dark button {
+    background-color: var(--sage-dark);
+    color: var(--beige);
+}
+
+#modeToggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+#timer {
+    font-size: 24px;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--sage);
+    margin: 8px auto;
+    padding: 10px;
+    width: 220px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
