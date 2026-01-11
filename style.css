@@ -38,7 +38,7 @@ h1 {
 
 .subtitle {
     font-size: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .gallery {
@@ -93,6 +93,80 @@ li {
     width: 220px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+/* Kalendar */
+.calendar-wrapper {
+    margin: 40px auto;
+}
+
+.calendar-big {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    border: 3px solid var(--sage);
+    background-color: var(--beige);
+    color: var(--brown);
+}
+
+body.dark .calendar-big {
+    background-color: var(--beige-dark);
+    color: var(--sage);
+    border-color: var(--sage-dark);
+}
+
+/* Zabica */
+.frog-container {
+    margin: 20px auto 30px;
+    width: 120px;
+}
+
+.frog {
+    position: relative;
+    width: 120px;
+    height: 80px;
+    background-color: var(--sage);
+    border-radius: 20px;
+    animation: hop 2s infinite ease-in-out;
+}
+
+.eye {
+    position: absolute;
+    top: -15px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--beige);
+    border-radius: 6px;
+}
+
+.eye.left {
+    left: 20px;
+}
+
+.eye.right {
+    right: 20px;
+}
+
+.eye::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--brown);
+}
+
+body.dark .frog {
+    background-color: var(--sage-dark);
+}
+
+@keyframes hop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes fadeIn {
