@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <title>STUDY-HUB</title>
 
-    <!-- Pixel font (čitljiv) -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="light">
 
 <button id="modeToggle">Dark mode</button>
 
-<!-- HOME PAGE -->
 <section id="home" class="page active">
     <h1>STUDY-HUB</h1>
     <p class="subtitle">Prostor za fokusirano i prijatno ucenje</p>
+
+    <!-- Pikselizovana zabica -->
+    <div class="frog-container">
+        <div class="frog">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+        </div>
+    </div>
 
     <div class="gallery">
         <button onclick="showPage('calendar')">Kalendar</button>
@@ -26,21 +31,23 @@
     </div>
 </section>
 
-<!-- KALENDAR -->
 <section id="calendar" class="page">
     <h2>Kalendar</h2>
-    <input type="date">
+
+    <div class="calendar-wrapper">
+        <input type="date" class="calendar-big">
+    </div>
+
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
-<!-- MUZIKA -->
 <section id="music" class="page">
-    <h2>Lofi muzika za ucenje</h2>
+    <h2>Ghibli instrumental lofi</h2>
 
     <iframe
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdR77H5Z8MIM"
-        width="300"
-        height="380"
+        src="https://open.spotify.com/embed/playlist/0JQ5DAqbMKFCbimwdOYlsl"
+        width="320"
+        height="420"
         frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
     </iframe>
@@ -48,7 +55,6 @@
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
-<!-- TODO -->
 <section id="todo" class="page">
     <h2>To-Do lista</h2>
 
@@ -60,7 +66,6 @@
     <button onclick="showPage('home')">Nazad</button>
 </section>
 
-<!-- POMODORO -->
 <section id="pomodoro" class="page">
     <h2>Pomodoro tajmer</h2>
 
